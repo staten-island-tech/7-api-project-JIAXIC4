@@ -39,7 +39,7 @@ root.geometry("800x500")
 title = tk.Label(
     root,
     text="Bird Watching Data",
-    font=("Arial", 20)
+    font=("Comic Sans MS", 20)
 )
 
 title.pack(pady=10)
