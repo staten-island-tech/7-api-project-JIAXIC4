@@ -11,6 +11,10 @@ def birds():
 
     response = requests.get(url, headers=headers)
     data = response.json()
+
+    if response.status_code != 200:
+        print("Error fetching data!")
+    
     print(data)
     for row in tree.get_children():
         tree.delete(row)
@@ -29,7 +33,7 @@ def birds():
 
 root = tk.Tk()
 
-root.title("Bird Watching Data")
+root.title("Bird Watching Data API")
 root.geometry("800x500")
 
 title = tk.Label(
@@ -42,7 +46,7 @@ title.pack(pady=10)
 
 label = tk.Label(
     root,
-    text="Enter Region/Area name such as US-NY: "
+    text="Enter Region/Area name such as US-NY or JP(japan :D): "
 )
 
 label.pack()
