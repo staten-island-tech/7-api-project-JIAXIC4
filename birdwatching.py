@@ -58,7 +58,9 @@ entry.pack(pady=5)
 button = tk.Button(
     root,
     text = "search",
-    command = birds
+    command = birds,
+    bg="lightblue", 
+    fg="black",
 )
 
 button.pack(pady=10)
